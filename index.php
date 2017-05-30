@@ -191,5 +191,30 @@ if($time_hour < 10){
     }
 
 ?>
+
+<!--Globals-->
+<?php
+
+// Global variable example
+
+    $x = 10;
+    $y = 5;
+    function add(){
+        $GLOBALS['z'] = $GLOBALS['x'] + $GLOBALS['y'];
+    }
+    add();
+    echo "Addition using global variable is " .$z . "<br>";
+
+?>
+
+<!--$_sever example-->
+<?php
+
+    echo "File name of currently executing script is ".$_SERVER['PHP_SELF'] . "<br>";
+    echo "Port of server is ".$_SERVER['SERVER_PORT'] . "<br>";
+    echo "Name of server is ".$_SERVER['SERVER_NAME'] . "<br>";
+
+
+?>
 </body>
 </html>
