@@ -133,7 +133,63 @@ if($time_hour < 10){
 
 ?>
 
+<!--Sorting in php-->
+<?php
 
+    $arr = [2, 3, 1, 5, 4];
+    $arr_1 = ["Yash" => 23, "Dhruv" => 20];
 
+    echo "Array => ";
+    for($x = 0; $x < count($arr); $x++){
+        echo $arr[$x] . " ";
+    }
+    echo "<br>";
+
+    sort($arr);
+
+    echo "Sorting array => ";
+    for($x = 0; $x < count($arr); $x++){
+        echo $arr[$x] . " ";
+    }
+    echo "<br>";
+
+    rsort($arr);
+
+    echo "Reverse sorting => ";
+    for($x = 0; $x < count($arr); $x++){
+        echo $arr[$x] . " ";
+    }
+    echo "<br><br>";
+
+    echo "Key Value array : <br>";
+    foreach ($arr_1 as $key => $value){
+        echo $key . " => " . $value ."<br>";
+    }
+
+    asort($arr_1);
+    echo "ascending sort by value : <br>";
+    foreach ($arr_1 as $key => $value){
+        echo $key . " => " . $value ."<br>";
+    }
+
+    arsort($arr_1);
+    echo "descending sort by value : <br>";
+    foreach ($arr_1 as $key => $value){
+        echo $key . " => " . $value ."<br>";
+    }
+
+    ksort($arr_1);
+    echo "ascending sort by Key : <br>";
+    foreach ($arr_1 as $key => $value){
+        echo $key . " => " . $value ."<br>";
+    }
+
+    krsort($arr_1);
+    echo "descending sort by Key : <br>";
+    foreach ($arr_1 as $key => $value){
+        echo $key . " => " . $value ."<br>";
+    }
+
+?>
 </body>
 </html>
